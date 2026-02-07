@@ -1,6 +1,7 @@
 import React from "react";
 import { Editor } from "@tinymce/tinymce-react";
 import { Controller } from "react-hook-form";
+import conf from "../conf/conf";
 
 export default function RTE({
   name = "content",
@@ -22,7 +23,7 @@ export default function RTE({
         defaultValue={defaultValue}
         render={({ field: { onChange, value } }) => (
           <Editor
-            apiKey="tgaaowzz1i5tluzb523vk6ozczcy6jjj1rzgsayojaoehw6k"
+            apiKey={conf.tinymceApiKey}
             value={value}
             onEditorChange={onChange}
             init={{
