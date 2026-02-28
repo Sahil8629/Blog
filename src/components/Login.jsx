@@ -19,7 +19,7 @@ function Login() {
             if (session) {
                 const userData = await authService.getCurrentUser()
                 if(userData) dispatch(authLogin(userData));
-                navigate("/")
+                navigate("/add-post")
             }
         } catch (error) {
             setError(error.message)
